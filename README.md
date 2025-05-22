@@ -25,6 +25,22 @@ In Intellij in "Project Structure"
 ```
 Or simply from Intellij. Run Application class (No build is needed).
 
+### Versioning
+https://github.com/allegro/axion-release-plugin
+https://axion-release-plugin.readthedocs.io/en/latest/
+
+```
+./gradlew currentVersion
+```
+#### Patch Version
+```
+./gradlew release -Prelease.pushTagsOnly -Prelease.versionIncrementer=incrementPatch
+```
+#### Minor Version
+```
+./gradlew release -Prelease.pushTagsOnly -Prelease.versionIncrementer=incrementMinor
+```
+
 ### Build Docker Image
 https://bmuschko.github.io/gradle-docker-plugin/current/user-guide/#spring_boot_application_plugin
 ```
